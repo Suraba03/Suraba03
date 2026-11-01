@@ -4,10 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Viacheslav Chekmenev — LLM Engineer</title>
-<meta name="description" content="Viacheslav (Slava) Chekmenev — LLM engineer in Almaty. LLM safety, inference optimization, fine-tuning and evaluation.">
+<meta name="description" content="Viacheslav (Slava) Chekmenev — ML / LLM engineer in Almaty. LLM evaluation and monitoring on production traffic, LLM-as-a-judge annotation, NLP model serving.">
 <meta property="og:title" content="Viacheslav Chekmenev — LLM Engineer">
-<meta property="og:description" content="LLM safety, inference optimization, fine-tuning and evaluation. Based in Almaty.">
+<meta property="og:description" content="LLM evaluation and monitoring on production traffic, LLM-as-a-judge annotation, NLP model serving. Based in Almaty.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://suraba03.github.io/Suraba03/">
+<link rel="canonical" href="https://suraba03.github.io/Suraba03/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23d4521f'/%3E%3Ctext x='16' y='23' font-family='monospace' font-size='20' font-weight='700' text-anchor='middle' fill='white'%3ES%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#fbfaf8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141413" media="(prefers-color-scheme: dark)">
 <style>
   :root {
     --bg: #fbfaf8;
@@ -116,10 +121,10 @@
       <span data-lang="ru"><b>LLM-инженер</b> · Алматы, Казахстан</span>
     </p>
     <p class="lead" data-lang="en">
-      I work on making language models safe, fast and measurable in production. About three years in ML. Outside of work I boulder a lot, and I'm building an AI coach for climbers.
+      I make LLM systems measurable and reliable in production: evaluation and monitoring on live traffic, LLM-as-a-judge annotation, and serving NLP models under load. About three years in ML. Outside of work I boulder a lot.
     </p>
     <p class="lead" data-lang="ru">
-      Занимаюсь тем, чтобы языковые модели в продакшене были безопасными, быстрыми и измеримыми. Около трёх лет в ML. Вне работы много лазаю на боулдеринге и делаю ИИ-тренера для скалолазов.
+      Делаю так, чтобы LLM-системы в продакшене были измеримыми и надёжными: оценка и мониторинг качества на живом трафике, LLM-разметка (LLM-as-a-judge), сервинг NLP-моделей под нагрузкой. Около трёх лет в ML. Вне работы много лазаю на боулдеринге.
     </p>
   </header>
 
@@ -129,16 +134,34 @@
     <div class="item">
       <div class="row">
         <span class="title">T-Bank — <span data-lang="en">LLM Engineer</span><span data-lang="ru">LLM-инженер</span></span>
-        <span class="when"><span data-lang="en">Almaty · present</span><span data-lang="ru">Алматы · по настоящее время</span></span>
+        <span class="when"><span data-lang="en">Jul 2025 – now · Moscow → Almaty</span><span data-lang="ru">июль 2025 – сейчас · Москва → Алматы</span></span>
       </div>
-      <p class="desc" data-lang="en">LLM safety, inference optimization, LoRA fine-tuning, evaluation and data flywheels, plus production quality monitoring of ML services.</p>
-      <p class="desc" data-lang="ru">Безопасность LLM, оптимизация инференса, LoRA-дообучение, оценка качества и data flywheel, а также мониторинг качества ML-сервисов в продакшене.</p>
+      <p class="desc" data-lang="en">Feature lead for production quality monitoring of a real-time PII-anonymization service in front of internal LLM apps and AI coding assistants. Built a two-stage LLM annotator (Qwen3-235B on vLLM + verifier): precision at 0.8 recall 0.10 → 0.59 after error analysis. Monitoring data drove retraining and rule fixes: detector recall 0.80 → 0.95. Root-caused a Triton / ONNX Runtime serving incident and drove the move to TensorRT: p99 latency −50% at quality parity.</p>
+      <p class="desc" data-lang="ru">Фича-лид мониторинга качества в продакшене для сервиса анонимизации персональных данных, который стоит перед внутренними LLM-приложениями и ИИ-ассистентами для кода. Собрал двухэтапный LLM-разметчик (Qwen3-235B на vLLM + верификатор): precision при recall 0,8 вырос с 0,10 до 0,59 после разбора ошибок. Данные мониторинга дали дообучение NER и правки правил: recall детектора 0,80 → 0,95. Нашёл причину инцидента в сервинге на Triton / ONNX Runtime и продавил переход на TensorRT: p99 −50% при том же качестве.</p>
+    </div>
+
+    <div class="item">
+      <div class="row">
+        <span class="title"><span data-lang="en">Sberbank — Data Scientist, Model Risk</span><span data-lang="ru">Сбербанк — Data Scientist, Центр модельных рисков</span></span>
+        <span class="when"><span data-lang="en">Jun 2024 – Jun 2025</span><span data-lang="ru">июнь 2024 – июнь 2025</span></span>
+      </div>
+      <p class="desc" data-lang="en">Validated 20+ production models (NLP, graph, tabular). Built an AutoML challenger-model pipeline with monitoring and drift checks for ~30 models. Co-built the bank's first testing framework for LLM apps and RAG.</p>
+      <p class="desc" data-lang="ru">Валидировал 20+ продовых моделей (NLP, графы, табличные данные). Сделал AutoML-пайплайн challenger-моделей с мониторингом и проверками дрифта для ~30 моделей. Участвовал в создании первого в банке фреймворка тестирования LLM-приложений и RAG.</p>
+    </div>
+
+    <div class="item">
+      <div class="row">
+        <span class="title"><span data-lang="en">Sberbank — Data Science Intern</span><span data-lang="ru">Сбербанк — стажёр Data Science</span></span>
+        <span class="when"><span data-lang="en">Oct 2023 – May 2024</span><span data-lang="ru">окт. 2023 – май 2024</span></span>
+      </div>
+      <p class="desc" data-lang="en">PPG signal analysis for arrhythmia and diabetes detection. Trained ViT / Swin, shipped interpretable CatBoost at ~10× lower latency.</p>
+      <p class="desc" data-lang="ru">Анализ PPG-сигналов для выявления аритмии и диабета. Обучал ViT / Swin, в прод ушёл интерпретируемый CatBoost с задержкой ниже в ~10 раз.</p>
     </div>
 
     <div class="item">
       <div class="row">
         <span class="title"><span data-lang="en">BSc — Moscow Aviation Institute</span><span data-lang="ru">Бакалавриат — Московский авиационный институт</span></span>
-        <span class="when">2024</span>
+        <span class="when">2020 – 2024</span>
       </div>
       <p class="desc" data-lang="en">Thesis on screening for type 2 diabetes and hypertension from photoplethysmography signals (see below).</p>
       <p class="desc" data-lang="ru">Диплом о скрининге диабета 2 типа и гипертонии по фотоплетизмограмме (см. ниже).</p>
@@ -151,24 +174,24 @@
     <div class="item">
       <div class="row">
         <span class="title">
-          <a href="https://github.com/Suraba03/bsc-thesis">PPG → diabetes &amp; blood pressure</a>
+          <a href="https://github.com/Suraba03/anki_manga">anki_manga</a>
+          <span class="tag"><span data-lang="en">in progress</span><span data-lang="ru">в разработке</span></span>
         </span>
-        <span class="when">2024</span>
+        <span class="when">Python · Chrome extension</span>
       </div>
-      <p class="desc" data-lang="en">Research prototype: raw PPG is band-pass filtered, turned into a wavelet image and passed to VGG / Swin Transformer models. Swin reached AUC-ROC 0.72 for type 2 diabetes and 8.5 mmHg MAE for systolic pressure on a hold-out set. Includes a Flask demo and an English preprint. Not a medical device.</p>
-      <p class="desc" data-lang="ru">Исследовательский прототип: сырой PPG-сигнал фильтруется, превращается в вейвлет-изображение и подаётся в модели VGG / Swin Transformer. Swin показал AUC-ROC 0,72 по диабету 2 типа и MAE 8,5 мм рт. ст. по систолическому давлению на отложенной выборке. Есть Flask-демо и препринт на английском. Не медицинское изделие.</p>
+      <p class="desc" data-lang="en">Read Japanese manga in Chrome and turn speech bubbles into Anki cards. Bubble text is OCR'd locally (manga-ocr via mokuro) and laid invisibly over the page, so Yomitan works on it. Clicking a bubble shows furigana, a translation and grammar notes (DeepSeek with your own API key; only the clicked bubble's text is sent, answers are cached), and one click adds a card to Anki.</p>
+      <p class="desc" data-lang="ru">Чтение японской манги в Chrome и превращение реплик в карточки Anki. Текст реплик распознаётся локально (manga-ocr через mokuro) и невидимым слоем кладётся поверх страницы, поэтому работает Yomitan. По клику на реплику показываются фуригана, перевод и разбор грамматики (DeepSeek с вашим API-ключом; уходит только текст нажатой реплики, ответы кэшируются), а одним нажатием в Anki добавляется карточка.</p>
     </div>
 
     <div class="item">
       <div class="row">
         <span class="title">
-          <span data-lang="en">AI climbing coach</span><span data-lang="ru">ИИ-тренер для скалолазов</span>
-          <span class="tag"><span data-lang="en">in progress</span><span data-lang="ru">в разработке</span></span>
+          <a href="https://github.com/Suraba03/bsc-thesis-ppg-diabetes-hypertension">PPG → diabetes &amp; blood pressure</a>
         </span>
-        <span class="when">2026</span>
+        <span class="when">2024</span>
       </div>
-      <p class="desc" data-lang="en">A side project: upload a video of a boulder attempt and get advice on how to send it. Pose estimation and technique detectors feed a fine-tuned, self-hosted LLM that coaches in English, Russian and Japanese.</p>
-      <p class="desc" data-lang="ru">Личный проект: загружаете видео попытки на трассе и получаете советы, как её пролезть. Оценка позы и детекторы техники передают данные дообученной LLM на собственном сервере, которая даёт советы на английском, русском и японском.</p>
+      <p class="desc" data-lang="en">Bachelor thesis, research prototype: raw PPG is band-pass filtered, turned into a wavelet image and passed to VGG / Swin Transformer models. Swin reached AUC-ROC 0.72 for type 2 diabetes and 8.5 mmHg MAE for systolic pressure; the epoch was picked on the same hold-out set, so these numbers are optimistic. Includes a Flask demo and an English preprint. Not a medical device.</p>
+      <p class="desc" data-lang="ru">Дипломная работа, исследовательский прототип: сырой PPG-сигнал фильтруется, превращается в вейвлет-изображение и подаётся в модели VGG / Swin Transformer. Swin показал AUC-ROC 0,72 по диабету 2 типа и MAE 8,5 мм рт. ст. по систолическому давлению; эпоха выбиралась на той же отложенной выборке, так что оценки оптимистичные. Есть Flask-демо и препринт на английском. Не медицинское изделие.</p>
     </div>
   </section>
 
@@ -176,35 +199,39 @@
     <h2><span data-lang="en">Stack &amp; skills</span><span data-lang="ru">Стек и навыки</span></h2>
 
     <div class="group">
-      <h3><span data-lang="en">LLMs</span><span data-lang="ru">LLM</span></h3>
+      <h3><span data-lang="en">LLM evaluation</span><span data-lang="ru">Оценка LLM</span></h3>
       <ul class="chips">
-        <li>vLLM</li><li>Triton</li><li>TensorRT</li>
-        <li><span data-lang="en">Quantization</span><span data-lang="ru">Квантизация</span></li>
-        <li>LoRA</li>
-        <li><span data-lang="en">Evaluation</span><span data-lang="ru">Оценка качества</span></li>
-        <li><span data-lang="en">LLM safety</span><span data-lang="ru">Безопасность LLM</span></li>
+        <li>LLM-as-a-judge</li>
+        <li><span data-lang="en">Human-in-the-loop annotation</span><span data-lang="ru">Разметка с людьми в контуре</span></li>
+        <li><span data-lang="en">NER metrics</span><span data-lang="ru">NER-метрики</span></li>
+        <li><span data-lang="en">Drift monitoring</span><span data-lang="ru">Мониторинг дрифта</span></li>
+      </ul>
+    </div>
+    <div class="group">
+      <h3><span data-lang="en">Serving</span><span data-lang="ru">Сервинг</span></h3>
+      <ul class="chips">
+        <li>vLLM</li><li>Triton Inference Server</li><li>ONNX Runtime</li><li>TensorRT</li><li>gRPC</li>
       </ul>
     </div>
     <div class="group">
       <h3><span data-lang="en">ML</span><span data-lang="ru">ML</span></h3>
       <ul class="chips">
-        <li>PyTorch</li>
-        <li><span data-lang="en">Computer vision</span><span data-lang="ru">Компьютерное зрение</span></li>
+        <li>PyTorch</li><li>Transformers</li><li>CatBoost</li>
         <li><span data-lang="en">Signal processing</span><span data-lang="ru">Обработка сигналов</span></li>
-        <li>Jupyter</li>
       </ul>
     </div>
     <div class="group">
-      <h3><span data-lang="en">Engineering</span><span data-lang="ru">Разработка</span></h3>
+      <h3><span data-lang="en">Data</span><span data-lang="ru">Данные</span></h3>
       <ul class="chips">
-        <li>Python</li><li>Flask</li><li>Git</li>
+        <li>Python</li><li>SQL</li><li>Airflow</li><li>Kafka</li><li>Docker</li>
       </ul>
     </div>
     <div class="group">
       <h3><span data-lang="en">Languages</span><span data-lang="ru">Языки</span></h3>
       <ul class="chips">
-        <li><span data-lang="en">Russian</span><span data-lang="ru">Русский</span></li>
-        <li><span data-lang="en">English</span><span data-lang="ru">Английский</span></li>
+        <li><span data-lang="en">Russian (native)</span><span data-lang="ru">Русский (родной)</span></li>
+        <li><span data-lang="en">English (C1)</span><span data-lang="ru">Английский (C1)</span></li>
+        <li><span data-lang="en">Japanese (beginner)</span><span data-lang="ru">Японский (начальный)</span></li>
       </ul>
     </div>
   </section>
@@ -212,13 +239,10 @@
   <section id="contact">
     <h2><span data-lang="en">Contact</span><span data-lang="ru">Контакты</span></h2>
     <div class="contacts">
+      <a href="mailto:chekmenev031@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/Suraba03">LinkedIn</a>
+      <a href="https://t.me/suraba03">Telegram</a>
       <a href="https://github.com/Suraba03">GitHub</a>
-      <a href="https://vk.com/suraba031">VK</a>
-      <!-- Add more links here, e.g.:
-      <a href="mailto:you@example.com">Email</a>
-      <a href="https://t.me/your_handle">Telegram</a>
-      <a href="https://www.linkedin.com/in/your-handle">LinkedIn</a>
-      -->
     </div>
   </section>
 
