@@ -1,32 +1,37 @@
 # Viacheslav (Slava) Chekmenev
 
-ML / LLM engineer in Almaty, Kazakhstan. I make LLM systems measurable and reliable in production: evaluation on live traffic, LLM-as-a-judge annotation, and serving NLP models under load.
+ML / LLM engineer in Almaty, Kazakhstan, open to relocation. By day I make LLM systems measurable and reliable in production. After hours I build language-learning tools with a team of Claude Code agents.
 
 **Website:** [suraba03.github.io/Suraba03](https://suraba03.github.io/Suraba03/) (English / Russian)
 
-## What I work on
+## Building now
+
+- [**anki_manga**](https://github.com/Suraba03/anki_manga) — **live on the [Chrome Web Store](https://chromewebstore.google.com/detail/manga-ocr-mining-for-anki/bgfnpifeeclmpfdcahphaiahgafjppeo)**. Read Japanese manga in the browser: on-device OCR of speech bubbles (ONNX Runtime Web, WebGPU / WASM), furigana, dictionary lookups, short grammar explanations, one-click Anki cards with the panel picture. Page images never leave your machine.
+- [**claude-code-abyss-team**](https://github.com/Suraba03/claude-code-abyss-team) — the setup that built anki_manga, as a template: a lead and two lanes of Claude Code in git worktrees, read-only trainee models, evidence-based done, and model × effort routing that learns from its own ledger.
+- **sentence-explainer** — starting: explain any selected sentence on any web page, for learners of popular languages.
+- **Next:** an app for climbers (spec stage).
+
+## Day job
 
 **T-Bank, LLM Platform** — LLM Engineer, Jul 2025 – now
 
-- Feature lead for production quality monitoring of a real-time PII-anonymization service that sits in front of internal LLM apps and AI coding assistants: live-traffic sampling, LLM + human annotation, per-entity NER metrics, drift alerts, dashboards.
-- Two-stage LLM annotator (Qwen3-235B on vLLM proposes, a smaller model verifies). Error analysis took precision at 0.8 recall from 0.10 to 0.59.
-- The monitoring data drove retraining and rule fixes: detector recall 0.80 → 0.95.
-- Root-caused a serving incident in Triton's ONNX Runtime backend and drove the move to TensorRT: p99 latency −50% at quality parity.
+- Feature lead for quality monitoring of a real-time anonymization service for personal data (PII) in front of internal LLM apps and AI coding agents: live-traffic sampling at 11M+ events/day, LLM + human annotation, per-entity NER metrics, drift alerts.
+- Two-stage LLM annotator (Qwen3-235B on vLLM proposes, a smaller model verifies): precision at 0.8 recall 0.10 → 0.59.
+- Data flywheel from monitoring to retraining: detector recall 0.80 → 0.95, precision 0.40 → 0.70.
+- Root-caused an ONNX Runtime / Triton serving incident and drove the move to TensorRT: p99 latency −50%. Longformer migration: 3.1× faster, +0.105 recall.
+- PII benchmark for AI-coding traffic (Claude Code / Codex): human review cut ~50×.
 
-**Sberbank** — Data Scientist (Model Risk), 2023 – 2025
+**Sberbank** — Data Scientist, Model Risk, Jun 2024 – Jun 2025 (Data Science intern from Oct 2023)
 
-- Validated 20+ production models; built an AutoML challenger-model pipeline; co-built the bank's first testing framework for LLM apps and RAG.
+- Validated 20+ production models; AutoML challenger pipeline and drift monitoring for ~30 models (−70% manual effort); co-built the bank's first testing framework for LLM and RAG apps, used by 10+ projects.
 
-Most of this work is internal, so it isn't here. What is here:
+## Also here
 
-## Code
-
-- [**anki_manga**](https://github.com/Suraba03/anki_manga) — in progress. Chrome extension plus a local helper for reading Japanese manga: speech bubbles are OCR'd locally and laid invisibly over the page so Yomitan works on them, with furigana, translation and grammar notes on click (DeepSeek, your own API key) and one-click Anki cards.
 - [**bsc-thesis-ppg-diabetes-hypertension**](https://github.com/Suraba03/bsc-thesis-ppg-diabetes-hypertension) — screening for type 2 diabetes and hypertension from photoplethysmography: wavelet images + VGG / Swin Transformer, Flask demo, English preprint.
 
 ## Stack
 
-`Python` · `PyTorch` · `Transformers` · `vLLM` · `Triton Inference Server` · `ONNX Runtime` · `TensorRT` · `Airflow` · `Kafka` · `SQL` · `CatBoost`
+`Python` · `PyTorch` · `Transformers` · `vLLM` · `Triton` · `ONNX Runtime` · `TensorRT` · `Airflow` · `Kafka` · `SQL` · `JavaScript` · `Chrome MV3` · `Cloudflare Workers` · `Claude Code`
 
 ## Contact
 

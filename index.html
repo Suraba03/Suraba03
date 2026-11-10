@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Viacheslav Chekmenev — LLM Engineer</title>
-<meta name="description" content="Viacheslav (Slava) Chekmenev — ML / LLM engineer in Almaty. LLM evaluation and monitoring on production traffic, LLM-as-a-judge annotation, NLP model serving.">
+<meta name="description" content="Viacheslav (Slava) Chekmenev — ML / LLM engineer in Almaty. LLM evaluation and monitoring on production traffic, NLP model serving. Builds language-learning tools: anki_manga, a Chrome extension for reading Japanese manga.">
 <meta property="og:title" content="Viacheslav Chekmenev — LLM Engineer">
-<meta property="og:description" content="LLM evaluation and monitoring on production traffic, LLM-as-a-judge annotation, NLP model serving. Based in Almaty.">
+<meta property="og:description" content="LLM evaluation and monitoring on production traffic, NLP model serving. Building anki_manga and other language-learning tools. Based in Almaty.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://suraba03.github.io/Suraba03/">
 <link rel="canonical" href="https://suraba03.github.io/Suraba03/">
@@ -100,8 +100,8 @@
   <nav>
     <div class="links">
       <a href="#about"><span data-lang="en">About</span><span data-lang="ru">Обо мне</span></a>
-      <a href="#work"><span data-lang="en">Work</span><span data-lang="ru">Работа</span></a>
       <a href="#projects"><span data-lang="en">Projects</span><span data-lang="ru">Проекты</span></a>
+      <a href="#work"><span data-lang="en">Work</span><span data-lang="ru">Работа</span></a>
       <a href="#stack"><span data-lang="en">Stack</span><span data-lang="ru">Стек</span></a>
       <a href="#contact"><span data-lang="en">Contact</span><span data-lang="ru">Контакты</span></a>
     </div>
@@ -121,12 +121,71 @@
       <span data-lang="ru"><b>LLM-инженер</b> · Алматы, Казахстан</span>
     </p>
     <p class="lead" data-lang="en">
-      I make LLM systems measurable and reliable in production: evaluation and monitoring on live traffic, LLM-as-a-judge annotation, and serving NLP models under load. About three years in ML. Outside of work I boulder a lot.
+      I make LLM systems measurable and reliable in production: evaluation and monitoring on live traffic, LLM-as-a-judge annotation, and serving NLP models under load. About three years in ML. After hours I build language-learning tools with a team of Claude Code agents, and I boulder a lot. Open to relocation.
     </p>
     <p class="lead" data-lang="ru">
-      Делаю так, чтобы LLM-системы в продакшене были измеримыми и надёжными: оценка и мониторинг качества на живом трафике, LLM-разметка (LLM-as-a-judge), сервинг NLP-моделей под нагрузкой. Около трёх лет в ML. Вне работы много лазаю на боулдеринге.
+      Делаю так, чтобы LLM-системы в продакшене были измеримыми и надёжными: оценка и мониторинг качества на живом трафике, LLM-разметка (LLM-as-a-judge), сервинг NLP-моделей под нагрузкой. Около трёх лет в ML. В свободное время делаю приложения для изучения языков вместе с командой агентов Claude Code и много лазаю на боулдеринге. Открыт к релокации.
     </p>
   </header>
+
+  <section id="projects">
+    <h2><span data-lang="en">Projects</span><span data-lang="ru">Проекты</span></h2>
+
+    <div class="item">
+      <div class="row">
+        <span class="title">
+          <a href="https://github.com/Suraba03/anki_manga">anki_manga</a>
+          <span class="tag"><span data-lang="en">live</span><span data-lang="ru">работает</span></span>
+        </span>
+        <span class="when">Chrome extension</span>
+      </div>
+      <p class="desc" data-lang="en">Read Japanese manga in Chrome and turn speech bubbles into Anki cards. Bubble text is recognized right in your browser (WebGPU / WASM), so page images never leave your machine. Click a bubble for furigana, dictionary lookups and a short grammar explanation (free tier, your own API key, or off); one more click saves an Anki card with the sentence and the panel picture. <a href="https://chromewebstore.google.com/detail/manga-ocr-mining-for-anki/bgfnpifeeclmpfdcahphaiahgafjppeo">Install from the Chrome Web Store</a> · <a href="https://github.com/Suraba03/anki_manga">source</a>.</p>
+      <p class="desc" data-lang="ru">Чтение японской манги в Chrome и превращение реплик в карточки Anki. Текст реплик распознаётся прямо в браузере (WebGPU / WASM), картинки страниц никуда не уходят. По клику на реплику — фуригана, словарь и короткий разбор грамматики (бесплатно, со своим API-ключом или выключено); ещё один клик — карточка в Anki с предложением и картинкой панели. <a href="https://chromewebstore.google.com/detail/manga-ocr-mining-for-anki/bgfnpifeeclmpfdcahphaiahgafjppeo">Установить из Chrome Web Store</a> · <a href="https://github.com/Suraba03/anki_manga">код</a>.</p>
+    </div>
+    <div class="item">
+      <div class="row">
+        <span class="title">
+          <a href="https://github.com/Suraba03/claude-code-abyss-team">claude-code-abyss-team</a>
+          <span class="tag"><span data-lang="en">template</span><span data-lang="ru">шаблон</span></span>
+        </span>
+        <span class="when">Claude Code</span>
+      </div>
+      <p class="desc" data-lang="en">The setup that built anki_manga, as a template for any project: a lead and two lanes of Claude Code in git worktrees, read-only trainee models, completion backed by evidence, and model × effort routing that learns from task results. Themed after Made in Abyss.</p>
+      <p class="desc" data-lang="ru">Сетап, на котором сделан anki_manga, в виде шаблона для любого проекта: лид и две линии Claude Code в git worktree, стажёры-модели только на чтение, «готово» только с доказательствами и выбор модели и effort по статистике задач. В стилистике Made in Abyss.</p>
+    </div>
+    <div class="item">
+      <div class="row">
+        <span class="title">
+          sentence-explainer
+          <span class="tag"><span data-lang="en">starting</span><span data-lang="ru">начинаю</span></span>
+        </span>
+        <span class="when">Chrome extension</span>
+      </div>
+      <p class="desc" data-lang="en">Explain any selected sentence on any web page, for learners of popular languages. The next language app after anki_manga.</p>
+      <p class="desc" data-lang="ru">Объясняет любое выделенное предложение на любой странице, для изучающих популярные языки. Следующее языковое приложение после anki_manga.</p>
+    </div>
+    <div class="item">
+      <div class="row">
+        <span class="title">
+          <span data-lang="en">Climbing app</span><span data-lang="ru">Приложение для скалолазов</span>
+          <span class="tag"><span data-lang="en">next</span><span data-lang="ru">дальше</span></span>
+        </span>
+        <span class="when"></span>
+      </div>
+      <p class="desc" data-lang="en">Planned after the language apps; at the spec stage now.</p>
+      <p class="desc" data-lang="ru">Следующее после языковых приложений; сейчас на этапе спецификации.</p>
+    </div>
+    <div class="item">
+      <div class="row">
+        <span class="title">
+          <a href="https://github.com/Suraba03/bsc-thesis-ppg-diabetes-hypertension">PPG → diabetes &amp; blood pressure</a>
+        </span>
+        <span class="when">2024</span>
+      </div>
+      <p class="desc" data-lang="en">Bachelor's thesis, research prototype: raw PPG is band-pass filtered, turned into a wavelet image and passed to VGG / Swin Transformer models. Swin reached AUC-ROC 0.72 for type 2 diabetes and 8.5 mmHg MAE for systolic pressure; the epoch was picked on the same hold-out set, so these numbers are optimistic. Includes a Flask demo and an English preprint. Not a medical device.</p>
+      <p class="desc" data-lang="ru">Дипломная работа, исследовательский прототип: сырой PPG-сигнал фильтруется, превращается в вейвлет-изображение и подаётся в модели VGG / Swin Transformer. Swin показал AUC-ROC 0,72 по диабету 2 типа и MAE 8,5 мм рт. ст. по систолическому давлению; эпоха выбиралась на той же отложенной выборке, так что оценки оптимистичные. Есть Flask-демо и препринт на английском. Не медицинское изделие.</p>
+    </div>
+  </section>
 
   <section id="work">
     <h2><span data-lang="en">Work &amp; education</span><span data-lang="ru">Работа и образование</span></h2>
@@ -136,8 +195,8 @@
         <span class="title">T-Bank — <span data-lang="en">LLM Engineer</span><span data-lang="ru">LLM-инженер</span></span>
         <span class="when"><span data-lang="en">Jul 2025 – now · Moscow → Almaty</span><span data-lang="ru">июль 2025 – сейчас · Москва → Алматы</span></span>
       </div>
-      <p class="desc" data-lang="en">Feature lead for production quality monitoring of a real-time PII-anonymization service in front of internal LLM apps and AI coding assistants. Built a two-stage LLM annotator (Qwen3-235B on vLLM + verifier): precision at 0.8 recall 0.10 → 0.59 after error analysis. Monitoring data drove retraining and rule fixes: detector recall 0.80 → 0.95. Root-caused a Triton / ONNX Runtime serving incident and drove the move to TensorRT: p99 latency −50% at quality parity.</p>
-      <p class="desc" data-lang="ru">Фича-лид мониторинга качества в продакшене для сервиса анонимизации персональных данных, который стоит перед внутренними LLM-приложениями и ИИ-ассистентами для кода. Собрал двухэтапный LLM-разметчик (Qwen3-235B на vLLM + верификатор): precision при recall 0,8 вырос с 0,10 до 0,59 после разбора ошибок. Данные мониторинга дали дообучение NER и правки правил: recall детектора 0,80 → 0,95. Нашёл причину инцидента в сервинге на Triton / ONNX Runtime и продавил переход на TensorRT: p99 −50% при том же качестве.</p>
+      <p class="desc" data-lang="en">Feature lead for production quality monitoring of a real-time anonymization service for personal data (PII) in front of internal LLM apps and AI coding assistants; 11M+ events a day. Built a two-stage LLM annotator (Qwen3-235B on vLLM + verifier): precision at 0.8 recall 0.10 → 0.59 after error analysis. Monitoring data drove retraining and rule fixes: detector recall 0.80 → 0.95, precision 0.40 → 0.70. Root-caused a Triton / ONNX Runtime serving incident and drove the move to TensorRT: p99 latency −50% at quality parity. Led a Longformer migration with an intern: 3.1× faster, +0.105 recall. Built a PII benchmark for AI-coding traffic that cut human review ~50×.</p>
+      <p class="desc" data-lang="ru">Фича-лид мониторинга качества в продакшене для сервиса анонимизации персональных данных, который стоит перед внутренними LLM-приложениями и ИИ-ассистентами для кода; 11M+ событий в день. Собрал двухэтапный LLM-разметчик (Qwen3-235B на vLLM + верификатор): precision при recall 0,8 вырос с 0,10 до 0,59 после разбора ошибок. Данные мониторинга дали дообучение NER и правки правил: recall детектора 0,80 → 0,95, precision 0,40 → 0,70. Нашёл причину инцидента в сервинге на Triton / ONNX Runtime и продавил переход на TensorRT: p99 −50% при том же качестве. Вместе со стажёром перевёл модель на Longformer: в 3,1 раза быстрее, recall +0,105. Сделал бенчмарк PII для трафика ИИ-ассистентов для кода: ручная проверка сократилась примерно в 50 раз.</p>
     </div>
 
     <div class="item">
@@ -145,8 +204,8 @@
         <span class="title"><span data-lang="en">Sberbank — Data Scientist, Model Risk</span><span data-lang="ru">Сбербанк — Data Scientist, Центр модельных рисков</span></span>
         <span class="when"><span data-lang="en">Jun 2024 – Jun 2025</span><span data-lang="ru">июнь 2024 – июнь 2025</span></span>
       </div>
-      <p class="desc" data-lang="en">Validated 20+ production models (NLP, graph, tabular). Built an AutoML challenger-model pipeline with monitoring and drift checks for ~30 models. Co-built the bank's first testing framework for LLM apps and RAG.</p>
-      <p class="desc" data-lang="ru">Валидировал 20+ продовых моделей (NLP, графы, табличные данные). Сделал AutoML-пайплайн challenger-моделей с мониторингом и проверками дрифта для ~30 моделей. Участвовал в создании первого в банке фреймворка тестирования LLM-приложений и RAG.</p>
+      <p class="desc" data-lang="en">Validated 20+ production models (NLP, graph, tabular). Built an AutoML challenger-model pipeline with monitoring and drift checks for ~30 models (−70% manual effort). Co-built the bank's first testing framework for LLM apps and RAG, used by 10+ projects.</p>
+      <p class="desc" data-lang="ru">Валидировал 20+ продовых моделей (NLP, графы, табличные данные). Сделал AutoML-пайплайн challenger-моделей с мониторингом и проверками дрифта для ~30 моделей (−70% ручной работы). Участвовал в создании первого в банке фреймворка тестирования LLM-приложений и RAG, им пользуются 10+ проектов.</p>
     </div>
 
     <div class="item">
@@ -165,33 +224,6 @@
       </div>
       <p class="desc" data-lang="en">Thesis on screening for type 2 diabetes and hypertension from photoplethysmography signals (see below).</p>
       <p class="desc" data-lang="ru">Диплом о скрининге диабета 2 типа и гипертонии по фотоплетизмограмме (см. ниже).</p>
-    </div>
-  </section>
-
-  <section id="projects">
-    <h2><span data-lang="en">Projects</span><span data-lang="ru">Проекты</span></h2>
-
-    <div class="item">
-      <div class="row">
-        <span class="title">
-          <a href="https://github.com/Suraba03/anki_manga">anki_manga</a>
-          <span class="tag"><span data-lang="en">in progress</span><span data-lang="ru">в разработке</span></span>
-        </span>
-        <span class="when">Python · Chrome extension</span>
-      </div>
-      <p class="desc" data-lang="en">Read Japanese manga in Chrome and turn speech bubbles into Anki cards. Bubble text is OCR'd locally (manga-ocr via mokuro) and laid invisibly over the page, so Yomitan works on it. Clicking a bubble shows furigana, a translation and grammar notes (DeepSeek with your own API key; only the clicked bubble's text is sent, answers are cached), and one click adds a card to Anki.</p>
-      <p class="desc" data-lang="ru">Чтение японской манги в Chrome и превращение реплик в карточки Anki. Текст реплик распознаётся локально (manga-ocr через mokuro) и невидимым слоем кладётся поверх страницы, поэтому работает Yomitan. По клику на реплику показываются фуригана, перевод и разбор грамматики (DeepSeek с вашим API-ключом; уходит только текст нажатой реплики, ответы кэшируются), а одним нажатием в Anki добавляется карточка.</p>
-    </div>
-
-    <div class="item">
-      <div class="row">
-        <span class="title">
-          <a href="https://github.com/Suraba03/bsc-thesis-ppg-diabetes-hypertension">PPG → diabetes &amp; blood pressure</a>
-        </span>
-        <span class="when">2024</span>
-      </div>
-      <p class="desc" data-lang="en">Bachelor thesis, research prototype: raw PPG is band-pass filtered, turned into a wavelet image and passed to VGG / Swin Transformer models. Swin reached AUC-ROC 0.72 for type 2 diabetes and 8.5 mmHg MAE for systolic pressure; the epoch was picked on the same hold-out set, so these numbers are optimistic. Includes a Flask demo and an English preprint. Not a medical device.</p>
-      <p class="desc" data-lang="ru">Дипломная работа, исследовательский прототип: сырой PPG-сигнал фильтруется, превращается в вейвлет-изображение и подаётся в модели VGG / Swin Transformer. Swin показал AUC-ROC 0,72 по диабету 2 типа и MAE 8,5 мм рт. ст. по систолическому давлению; эпоха выбиралась на той же отложенной выборке, так что оценки оптимистичные. Есть Flask-демо и препринт на английском. Не медицинское изделие.</p>
     </div>
   </section>
 
@@ -227,11 +259,18 @@
       </ul>
     </div>
     <div class="group">
+      <h3><span data-lang="en">Browser &amp; apps</span><span data-lang="ru">Браузер и приложения</span></h3>
+      <ul class="chips">
+        <li>JavaScript</li><li><span data-lang="en">Chrome extensions (MV3)</span><span data-lang="ru">Расширения Chrome (MV3)</span></li><li>onnxruntime-web</li><li>WebGPU / WASM</li><li>Cloudflare Workers</li><li>Claude Code</li>
+      </ul>
+    </div>
+    <div class="group">
       <h3><span data-lang="en">Languages</span><span data-lang="ru">Языки</span></h3>
       <ul class="chips">
         <li><span data-lang="en">Russian (native)</span><span data-lang="ru">Русский (родной)</span></li>
         <li><span data-lang="en">English (C1)</span><span data-lang="ru">Английский (C1)</span></li>
-        <li><span data-lang="en">Japanese (beginner)</span><span data-lang="ru">Японский (начальный)</span></li>
+        <li><span data-lang="en">Japanese (elementary)</span><span data-lang="ru">Японский (начальный)</span></li>
+        <li><span data-lang="en">German (beginner)</span><span data-lang="ru">Немецкий (начинаю)</span></li>
       </ul>
     </div>
   </section>
